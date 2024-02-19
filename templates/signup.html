@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealthy Sign Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #0c2340; /* Dark blue */
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+    }
+    .signup-container {
+      margin-top: 100px;
+      max-width: 400px;
+    }
+    .signup-form {
+      background-color: #1a1a1a; /* Dark gray */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    .signup-form h2 {
+      color: #ffd700; /* Gold */
+    }
+    .signup-form label {
+      color: #ffd700; /* Gold */
+    }
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"] {
+      background-color: #333333; /* Dark gray */
+      color: #ffffff;
+    }
+    .signup-form button[type="submit"],
+    .signup-form button[type="button"] {
+      background-color: #ffd700; /* Gold */
+      border-color: #ffd700; /* Gold */
+    }
+    .signup-form button[type="submit"]:hover,
+    .signup-form button[type="button"]:hover {
+      background-color: #d4af37; /* Goldenrod */
+      border-color: #d4af37; /* Goldenrod */
+    }
+    .login-btn {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .login-btn a {
+      color: #ffd700; /* Gold */
+    }
+    .login-btn a:hover {
+      color: #d4af37; /* Goldenrod */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 signup-container">
+        <div class="signup-form">
+          <h2 class="text-center mb-4">Sign Up</h2>
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+          </form>
+          <div class="login-btn">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
