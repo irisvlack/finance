@@ -9,6 +9,8 @@ packages = [{include = "repl_nix_finance"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.2"
+pyodbc = "^5.1.0"
+werkzeug = "^3.0.1"
 
 
 [build-system]

@@ -5,15 +5,369 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=	, initial-scale=1.0">
   <title>money</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+   <style>
+     body {
+       background-color: #0c2340; /* Dark blue */
+       color: #ffffff;
+       font-family: 'Arial', sans-serif;
+     }
+
+  .rds-Heading{line-height:1.25;color:#1f2426;font-family:canada-type-gibson,Arial,sans-serif;font-size:24px;font-weight:600;margin-top:0;margin-bottom:0;text-indent:0;text-transform:none;text-shadow:none;letter-spacing:0;font-style:normal}.rds-Heading--xsmall{font-size:18px}.rds-Heading--small{font-size:20px}.rds-Heading--large{font-size:28px}@media screen and (min-width:37.5em){.rds-Heading--large{font-size:34px}}.rds-Heading--xlarge{font-size:34px}@media screen and (min-width:37.5em){.rds-Heading--xlarge{line-height:1.1;font-size:48px}}.rds-Heading--2xlarge{font-size:40px}@media screen and (min-width:37.5em){.rds-Heading--2xlarge{line-height:1.1;font-size:60px}}.rds-Heading em{font-style:italic}.rds-Heading a{text-decoration:none;color:inherit}.rds-Heading a:hover{color:#495257}.rds-Heading--alternate{color:#003561}.rds-Heading--alternate a:hover{color:#005b98}.rds-Heading--brand{color:var(--rds-heading-brand-color,#0073b9)}.rds-Heading--brand a:hover{color:var(--rds-heading-brand-interactive-color,#005b98)}.rds-Heading.on-darkCanvas{color:#fff}.rds-Heading.on-darkCanvas a:hover{color:#f5f7f8}.rds-Input{position:relative;flex:1;width:100%}.rds-Input input{box-sizing:border-box;display:block;margin:0;border:1px solid #69757a;border-radius:4px;background-color:#fff;padding:12px;width:100%;height:42px;line-height:1;color:#1f2426;font-family:canada-type-gibson,Arial,sans-serif;font-size:16px;font-weight:400}.rds-Input input:not(:first-child){padding-left:32px}.rds-Input input:not(:last-child){padding-right:32px}.rds-Input input:active,.rds-Input input:focus{outline:0;border-color:#0073b9;box-shadow:inset 0 0 0 1px #0073b9}.rds-Input-icon{position:absolute;top:50%;transform:translateY(-50%);color:#69757a}.rds-Input-icon:first-child{left:2px;margin-left:12px}.rds-Input-icon:last-child{right:2px;margin-right:12px}.rds-Input--sm input{padding:8px;height:32px;font-size:14px}.rds-Input--sm input:not(:first-child){padding-left:26px}.rds-Input--sm input:not(:last-child){padding-right:26px}.rds-Input--sm .rds-Input-icon:first-child{margin-left:8px}.rds-Input--sm .rds-Input-icon:last-child{margin-right:8px}.rds-Input--lg input{padding:16px;height:52px;font-size:18px}.rds-Input--lg input:not(:first-child){padding-left:36px}.rds-Input--lg input:not(:last-child){padding-right:36px}.rds-Input--lg .rds-Input-icon:first-child{margin-left:16px}.rds-Input--lg .rds-Input-icon:last-child{margin-right:16px}.rds-Input--lengthXS{flex:initial;width:100px}.rds-Input--lengthSM{flex:initial;width:200px}.rds-Input--lengthMD{flex:initial;width:300px}.rds-Input--lengthLG{flex:initial;width:425px}.rds-Input--lengthXL{flex:initial;width:550px}.rds-Input.is-invalid input{border-color:#cc392f;box-shadow:inset 0 0 0 1px #cc392f}.rds-Input input::-webkit-input-placeholder{color:#69757a}.rds-Input input:-ms-input-placeholder{color:#69757a}.rds-Input input::placeholder{color:#69757a}.rds-Input input:disabled{border-color:#d5d9db;box-shadow:none;background-color:#f5f7f8;cursor:not-allowed;color:#b6bec2}.rds-Input input:disabled::-webkit-input-placeholder{color:#b6bec2}.rds-Input input:disabled:-ms-input-placeholder{color:#b6bec2}.rds-Input input:disabled::placeholder{color:#b6bec2}.rds-Input.is-disabled .rds-Input-icon{color:#b6bec2}.rds-Icon{width:16px;max-width:100%;height:auto;fill:currentColor;vertical-align:middle}.rds-Icon--xsmall{width:12px}.rds-Icon--small{width:14px}.rds-Icon--large{width:24px}.rds-Icon--xlarge{width:32px}.rds-Icon--primary{fill:var(--rds-icon-primary-fill-color,#0073b9)}.rds-Icon--alternate{fill:var(--rds-icon-alternate-fill-color,#00b2f6)}.rds-Icon--neutral{fill:#b6bec2}.rds-Icon--light{fill:#fff}.rds-Icon--positive{fill:#35bd59}.rds-Icon--negative{fill:#e64b40}.rds-Text{margin-top:0;margin-bottom:0;text-indent:0;text-transform:none;text-shadow:none;line-height:1.25;letter-spacing:0;color:#1f2426;font-family:canada-type-gibson,Arial,sans-serif;font-size:18px;font-weight:400}.rds-Text--bodySmall{font-size:16px}.rds-Text--bodyLarge{font-size:20px}.rds-Text--subtitle{font-size:24px}@media screen and (min-width:37.5em){.rds-Text--subtitle{font-size:28px}}.rds-Text--subdued{color:#495257}.rds-Text em,.rds-Text i,em.rds-Text,i.rds-Text{font-style:italic}.rds-Text b,.rds-Text strong,b.rds-Text,strong.rds-Text{font-weight:600}.rds-Text a{text-decoration:underline;color:#0073b9}.rds-Text a:hover{color:#005b98}.rds-Text.on-darkCanvas,.rds-Text.on-darkCanvas a,.rds-Text.on-darkCanvas a:hover{color:#fff}.rds-Button{box-sizing:border-box;display:inline-flex;align-items:center;flex-shrink:0;justify-content:center;transition:background-color .3s cubic-bezier(.19,1,.22,1),border-color .3s cubic-bezier(.19,1,.22,1),color .3s cubic-bezier(.19,1,.22,1);border:1px solid transparent;border-radius:4px;box-shadow:inset #0073b9;background-color:var(--rds-button-background-color,#0073b9);cursor:pointer;padding:12px 20px;width:auto;text-align:center;text-indent:0;text-transform:none;text-decoration:none;text-shadow:none;line-height:1;letter-spacing:normal;color:var(--rds-button-text-color,#fff);font-family:canada-type-gibson,Arial,sans-serif;font-size:16px;font-weight:600;font-style:normal;word-break:break-word}.rds-Button:active:not([disabled]),.rds-Button:focus:not([disabled]),.rds-Button:hover:not([disabled]){background-color:var(--rds-button-background-color-interactive,#005b98);color:#fff}.rds-Button.on-darkCanvas{background-color:#fff;color:var(--rds-button-background-color,#0073b9)}.rds-Button.on-darkCanvas:active:not([disabled]),.rds-Button.on-darkCanvas:focus:not([disabled]),.rds-Button.on-darkCanvas:hover:not([disabled]){background-color:hsla(0,0%,100%,.9);color:var(--rds-button-background-color,#0073b9)}.rds-Button--alternate,.rds-Button--alternate.on-darkCanvas{background-color:var(--rds-button-alternate-background-color,#fcd214);color:var(--rds-button-alternate-text-color,#003561)}.rds-Button--alternate.on-darkCanvas:active:not([disabled]),.rds-Button--alternate.on-darkCanvas:focus:not([disabled]),.rds-Button--alternate.on-darkCanvas:hover:not([disabled]),.rds-Button--alternate:active:not([disabled]),.rds-Button--alternate:focus:not([disabled]),.rds-Button--alternate:hover:not([disabled]){background-color:var(--rds-button-alternate-background-color-interactive,#ffe45e);color:var(--rds-button-alternate-text-color,#003561)}.rds-Button--ghost{border-color:var(--rds-button-background-color,#0073b9);box-shadow:inset 0 0 0 1px #0073b9;background-color:transparent;color:var(--rds-button-background-color,#0073b9)}.rds-Button--ghost.on-darkCanvas{border-color:#fff;box-shadow:inset 0 0 0 1px #fff;background-color:transparent;color:#fff}.rds-Button--ghost.on-darkCanvas:active:not([disabled]),.rds-Button--ghost.on-darkCanvas:focus:not([disabled]),.rds-Button--ghost.on-darkCanvas:hover:not([disabled]){background-color:hsla(0,0%,100%,.1);color:#fff}.rds-Button--ghost:active:not([disabled]),.rds-Button--ghost:focus:not([disabled]),.rds-Button--ghost:hover:not([disabled]){background-color:var(--rds-button-transparent-background-color-interactive,rgba(0,115,185,.1));color:var(--rds-button-background-color,#0073b9)}.rds-Button--subtle{background-color:transparent;color:var(--rds-button-background-color,#0073b9)}.rds-Button--subtle.on-darkCanvas{background-color:transparent;color:#fff}.rds-Button--subtle.on-darkCanvas:active:not([disabled]),.rds-Button--subtle.on-darkCanvas:focus:not([disabled]),.rds-Button--subtle.on-darkCanvas:hover:not([disabled]){background-color:hsla(0,0%,100%,.1);color:#fff}.rds-Button--subtle:active:not([disabled]),.rds-Button--subtle:focus:not([disabled]),.rds-Button--subtle:hover:not([disabled]){background-color:var(--rds-button-transparent-background-color-interactive,rgba(0,115,185,.1));color:var(--rds-button-background-color,#0073b9)}.rds-Button--danger{background-color:#e64b40;color:#fff}.rds-Button--danger.on-darkCanvas{background-color:#fff;color:#e64b40}.rds-Button--danger.on-darkCanvas:active:not([disabled]),.rds-Button--danger.on-darkCanvas:focus:not([disabled]),.rds-Button--danger.on-darkCanvas:hover:not([disabled]){background-color:hsla(0,0%,100%,.9);color:#e64b40}.rds-Button--danger:active:not([disabled]),.rds-Button--danger:focus:not([disabled]),.rds-Button--danger:hover:not([disabled]){background-color:#cc392f;color:#fff}.rds-Button--dangerSubtle{background-color:transparent;color:#e64b40}.rds-Button--dangerSubtle.on-darkCanvas{background-color:#fff;color:#e64b40}.rds-Button--dangerSubtle.on-darkCanvas:active:not([disabled]),.rds-Button--dangerSubtle.on-darkCanvas:focus:not([disabled]),.rds-Button--dangerSubtle.on-darkCanvas:hover:not([disabled]){background-color:hsla(0,0%,100%,.9);color:#e64b40}.rds-Button--dangerSubtle:active:not([disabled]),.rds-Button--dangerSubtle:focus:not([disabled]),.rds-Button--dangerSubtle:hover:not([disabled]){background:rgba(230,75,64,.1);color:#e64b40}.rds-Button--neutralSubtle{background-color:transparent;color:#1f2426}.rds-Button--neutralSubtle.on-darkCanvas{background-color:transparent;color:#fff}.rds-Button--neutralSubtle.on-darkCanvas:active:not([disabled]),.rds-Button--neutralSubtle.on-darkCanvas:focus:not([disabled]),.rds-Button--neutralSubtle.on-darkCanvas:hover:not([disabled]){background-color:hsla(0,0%,100%,.1);color:#fff}.rds-Button--neutralSubtle:active:not([disabled]),.rds-Button--neutralSubtle:focus:not([disabled]),.rds-Button--neutralSubtle:hover:not([disabled]){background-color:rgba(232,236,237,.44);color:#1f2426}.rds-Button--small{padding:8px 16px;font-size:14px}.rds-Button--large{padding:16px 24px;font-size:18px}.rds-Button--xlarge{padding:20px 28px;font-size:20px}.rds-Button--fullWidth,.rds-Button--fullWidthOnMobile{width:100%}@media screen and (min-width:37.5em){.rds-Button--fullWidthOnMobile{width:auto}}.rds-Button--iconOnly{padding:12px}.rds-Button--iconOnly.rds-Button--small{padding:8px}.rds-Button--iconOnly.rds-Button--large{padding:13px}.rds-Button--iconOnly.rds-Button--xlarge{padding:18px}.rds-Button-icon{flex-shrink:0;pointer-events:none}.rds-Button-icon--left{margin-right:8px}.rds-Button-icon--right{margin-left:8px}.rds-Button[disabled]{cursor:not-allowed!important}.rds-Button.is-disabled,.rds-Button[disabled]{opacity:.4!important;-webkit-user-select:none!important;-ms-user-select:none!important;user-select:none!important}a.rds-Button.is-disabled{pointer-events:none!important}.BudgetGroup-module_BudgetGroup__Q26rM .BudgetGroup-module_Heading__ZPzI6{color:var(--budgetHeadingColor)}.BudgetGroup-module_BudgetGroup__Q26rM:first-child .BudgetGroup-module_BudgetItem__PqUo7{border:none}.BudgetItem-module_BudgetItem__DkHaM{align-items:center;border-bottom:1px solid var(--budgetItemsDividerColor);display:flex;flex-wrap:wrap;gap:24px;padding:8px 0;width:100%}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Label__GyJOF{align-items:center;display:inline-flex;flex:1;font-family:canada-type-gibson,Arial,sans-serif;font-size:var(--fontSize16);font-weight:400;width:100%}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Label__GyJOF .BudgetItem-module_LabelText__E04c8{flex-grow:0}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Tooltip__l8t2j{flex-shrink:0}@media only screen and (min-width:414px){.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Tooltip__l8t2j{flex-grow:0}}@media only screen and (min-width:768px){.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Label__GyJOF{font-size:var(--fontSize18)}}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Input__YirV6{flex:0;max-width:118px;min-width:118px}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Input__YirV6 input{font-size:var(--fontSize16);text-align:right}@media only screen and (min-width:768px){.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Input__YirV6{flex:0;max-width:100%;min-width:130px}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Input__YirV6 input{font-size:var(--fontSize18);text-align:right}}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Indicator__Uuz8-{flex-shrink:0;margin-right:var(--spacing-8)}@media only screen and (min-width:768px){.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_Indicator__Uuz8-{margin-right:var(--spacing-16)}}.BudgetItem-module_BudgetItem__DkHaM .BudgetItem-module_InformationIcon__lpLVD{cursor:pointer;padding:var(--spacing-8) 0 var(--spacing-8) var(--spacing-8);width:24px}.Indicator-module_Indicator__tCcLy{--budgetItemIndicatorColor:#f2f2f2;background-color:var(--budgetItemIndicatorColor);border-radius:16px;height:16px;width:16px}.Tooltip-module_Tooltip__g8PX-{--tooltip-margin:var(--spacing-8);--z-popover:10;--tooltipWidth:155px;--tooltipBackgroundColor:#495257;display:block;position:relative}@media only screen and (min-width:768px){.Tooltip-module_Tooltip__g8PX-{--tooltipWidth:245px}}.Tooltip-module_Tooltip__g8PX-:before{background-color:#fff;border:1px solid var(--budgetHeadingColor);border-radius:var(--borderRadius-8);color:var(--budgetSummaryTotalColor);content:attr(data-text);font-size:var(--fontSize14);line-height:1.25em;padding:var(--spacing-8);text-align:left;width:calc(var(--tooltipWidth)*0.85)}@media only screen and (min-width:768px){.Tooltip-module_Tooltip__g8PX-:before{padding:var(--spacing-16)}}.Tooltip-module_Tooltip__g8PX-:before{opacity:0;pointer-events:none;position:absolute;transition:opacity .3s;z-index:var(--z-popover)}.Tooltip-module_Tooltip__g8PX-:focus-within:before,.Tooltip-module_Tooltip__g8PX-:focus:before,.Tooltip-module_Tooltip__g8PX-:hover:before{opacity:1}.Tooltip-module_Tooltip__g8PX-.Tooltip-module_IsOpenTop__QSTBo:before{bottom:100%;left:50%;margin-bottom:var(--tooltip-margin);transform:translateX(-50%)}.Tooltip-module_Tooltip__g8PX-.Tooltip-module_IsOpenRight__GTPH-:before{left:100%;margin-left:var(--tooltip-margin);top:50%;transform:translateY(-50%)}.Tooltip-module_Tooltip__g8PX-.Tooltip-module_IsOpenBottom__8yKFH:before{left:50%;margin-top:var(--tooltip-margin);top:100%;transform:translateX(-50%)}.Tooltip-module_Tooltip__g8PX-.Tooltip-module_IsOpenLeft__wTW-q:before{margin-right:var(--tooltip-margin);right:100%;top:50%;transform:translateY(-50%)}.BudgetCalculator-module_BudgetCalculator__rEy1C{--spacing-48:48px;--spacing-24:24px;--spacing-16:16px;--spacing-8:8px;--spacing-4:4px;--budgetHeadingColor:#69757a;--budgetSummaryTotalColor:#1f2426;--budgetItemsTotalColor:#1f2426;--budgetItemsDividerColor:#e8eced;--baseFontFamily:canada-type-gibson,Arial,sans-serif;--fontSize24:24px;--fontSize20:20px;--fontSize18:18px;--fontSize16:16px;--fontSize12:12px;--fontSize14:14px;--fontWeight600:600;--fontWeight500:500;--borderRadius-8:8px;box-sizing:border-box;display:flex}.BudgetCalculator-module_BudgetCalculator__rEy1C *,.BudgetCalculator-module_BudgetCalculator__rEy1C :after,.BudgetCalculator-module_BudgetCalculator__rEy1C :before{box-sizing:inherit}.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_Container__G8K6C{display:flex;flex-wrap:wrap;height:100%;max-width:100%;width:100%}@media only screen and (min-width:768px){.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_Container__G8K6C{grid-gap:0 16px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr 1fr;max-width:100%;padding:var(--spacing-48)}}@media only screen and (min-width:820px){.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_Container__G8K6C{grid-gap:0 48px}}.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_BudgetItemsContainer__hDCJP{flex:0 0 100%;order:2}@media only screen and (min-width:768px){.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_BudgetItemsContainer__hDCJP{grid-row:span 2;order:unset}}.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_Title__VHJVB{grid-column:span 2;margin-bottom:var(--spacing-24)}.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_ExpenseGroup__tKXQr,.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_IncomeGroup__BiiS-{margin-bottom:var(--spacing-24)}.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_BudgetSummaryContainer__cKGwD{box-sizing:border-box;display:flex;flex:0 0 100%;height:auto;justify-content:center;order:1;padding-bottom:40px}@media only screen and (min-width:768px){.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_BudgetSummaryContainer__cKGwD{height:400px;margin-bottom:0;order:unset}}.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_BudgetCTAContainer__gWneX{box-sizing:border-box;flex:0 0 100%;order:3}@media only screen and (min-width:768px){.BudgetCalculator-module_BudgetCalculator__rEy1C .BudgetCalculator-module_BudgetCTAContainer__gWneX{order:unset}}.BudgetDifference-module_BudgetDifference__U9OxO{align-items:center;display:flex;gap:24px;justify-content:space-between;width:100%}.BudgetDifference-module_BudgetDifference__U9OxO .BudgetDifference-module_Heading__a-vpd{color:var(--budgetHeadingColor);flex:1 1;font-size:var(--fontSize18);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.BudgetDifference-module_BudgetDifference__U9OxO .BudgetDifference-module_Value__ZUdAa{color:var(--budgetItemsTotalColor);flex:1;flex-shrink:0;font-family:var(--baseFontFamily);font-size:var(--fontSize24);font-weight:var(--fontWeight600);text-align:right}@media only screen and (min-width:768px){.BudgetDifference-module_BudgetDifference__U9OxO .BudgetDifference-module_Value__ZUdAa{min-width:132px}}.BudgetDifference-module_BudgetDifference__U9OxO .BudgetDifference-module_Value__ZUdAa.BudgetDifference-module_IsNegative__Pioph{color:#e64b40}.BudgetDifference-module_BudgetDifference__U9OxO .BudgetDifference-module_Value__ZUdAa.BudgetDifference-module_IsPositive__oEqOl{color:#35bd59}.DefaultBudgetCTA-module_DefaultBudgetCTA__eDds0{padding:var(--spacing-48) 0}@media only screen and (min-width:768px){.DefaultBudgetCTA-module_DefaultBudgetCTA__eDds0{padding:var(--spacing-24)}}.DefaultBudgetCTA-module_DefaultBudgetCTA__eDds0 .DefaultBudgetCTA-module_Heading__ZD7qK{margin-bottom:var(--spacing-8)}.DefaultBudgetCTA-module_DefaultBudgetCTA__eDds0 .DefaultBudgetCTA-module_Text__XV7CN{margin-bottom:var(--spacing-24)}@media only screen and (min-width:768px){.DefaultBudgetCTA-module_DefaultBudgetCTA__eDds0 .DefaultBudgetCTA-module_Text__XV7CN{margin-bottom:var(--spacing-24);margin-right:var(--spacing-48)}}.BudgetSummary-module_BudgetSummary__aJGKg{height:268px;pointer-events:none;position:relative;width:268px}@media only screen and (min-width:768px){.BudgetSummary-module_BudgetSummary__aJGKg{height:300px;width:300px}}.BudgetSummary-module_BudgetSummary__aJGKg .BudgetSummary-module_TextContainer__6XZvC{left:50%;position:absolute;text-align:center;top:50%;transform:translate(-50%,-50%)}.BudgetSummary-module_BudgetSummary__aJGKg .BudgetSummary-module_Label__RYkc6{color:var(--budgetHeadingColor);font-size:var(--fontSize18);margin-bottom:var(--spacing-4)}.BudgetSummary-module_BudgetSummary__aJGKg .BudgetSummary-module_Total__IxqMl{color:var(--budgetSummaryTotalColor);font-family:var(--baseFontFamily);font-size:var(--fontSize24);font-weight:var(--fontWeight600)}     
+</style>
 </head>
   
 <body>
-  {% include 'nav.html' %}
-  
-  <div>
-    {% for expences in expences %}
-    {% include 'expences.html' %}
-    {% endfor%}
+  <div class="BudgetCalculator">
+    <div id="budget_calculator">
+  <div class="BudgetCalculator-module_BudgetCalculator__rEy1C">
+    <div class="BudgetCalculator-module_Container__G8K6C">
+      <h1 class="rds-Heading rds-Heading--large BudgetCalculator-module_Title__VHJVB" style = "color:white; text-align:center;">Budget Calculator<p
+          class="rds-Text rds-Text--bodySmall" style = "color: white;">Enter your income and the calculator will show the national averages for
+          most budget categories as a starting point. A few of these are recommendations (like giving). Most just reflect
+          average spending (like debt). Don't have debt? Yay! Move that money to your current money goal.</p>
+      </h1>
+      <div class="BudgetCalculator-module_BudgetItemsContainer__hDCJP">
+        <div class="BudgetGroup-module_BudgetGroup__Q26rM BudgetCalculator-module_IncomeGroup__BiiS-">
+          <h2 class="rds-Heading rds-Heading--xsmall BudgetGroup-module_Heading__ZPzI6">Income</h2>
+          <div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF"><span
+                  class="BudgetItem-module_LabelText__E04c8">Monthly Income (after taxes)</span></label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Monthly Income (after taxes)" value="0.00">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="BudgetGroup-module_BudgetGroup__Q26rM BudgetCalculator-module_ExpenseGroup__tKXQr">
+          <h2 class="rds-Heading rds-Heading--xsmall BudgetGroup-module_Heading__ZPzI6">Expenses</h2>
+          <div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #52741F;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Giving</span>
+                <div data-testid="tooltip" data-text="Start your budget right by giving 10% of your income."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Giving" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #006990;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Savings</span>
+                <div data-testid="tooltip"
+                  data-text="If you have debt, get $1,000 in savings—then focus on paying off the debt."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Savings" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #00B2F6;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Food</span>
+                <div data-testid="tooltip" data-text="This is what you usually spend on groceries and restaurants."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Food" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #EA3921;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Utilities</span>
+                <div data-testid="tooltip" data-text="Think electricity, water, natural gas, your basic phone plan, etc."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Utilities" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #0062B9;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Housing</span>
+                <div data-testid="tooltip"
+                  data-text="Aim for 25% (or less) of your monthly take-home pay for this and your homeowners/renters insurance."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Housing" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #8EC638;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Transportation</span>
+                <div data-testid="tooltip" data-text="Think gas, auto insurance, maintenance, etc."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Transportation" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #F6A200;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Insurance</span>
+                <div data-testid="tooltip"
+                  data-text="Add the policies you didn't budget for yet: term life, health, long-term disability, long-term care (age 60+), identity theft, and umbrella (with a net worth of $500,000 or more)."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Insurance" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #581845;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Household Items</span>
+                <div data-testid="tooltip" data-text="Don't forget laundry care, toothpaste, soap and such. (Please.)"
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Household Items" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #1200DD;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Debt</span>
+                <div data-testid="tooltip"
+                  data-text="This is any money you owe: credit cards, car payments, student loans, etc."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Debt" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #8B008B;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Retirement</span>
+                <div data-testid="tooltip"
+                  data-text="Once you're debt-free with a fully funded emergency fund, plan to invest 15% of your monthly take-home pay."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Retirement" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #B300D0;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Personal and Entertainment</span>
+                <div data-testid="tooltip"
+                  data-text="Add in what you spend on fun activities, personal care, streaming services, etc."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Personal and Entertainment" value="0.00"></div>
+            </div>
+            <div class="BudgetItem-module_BudgetItem__DkHaM"><label class="BudgetItem-module_Label__GyJOF">
+                <div class="Indicator-module_Indicator__tCcLy BudgetItem-module_Indicator__Uuz8-"
+                  style="--budgetItemIndicatorColor: #AC3400;"></div><span
+                  class="BudgetItem-module_LabelText__E04c8">Other</span>
+                <div data-testid="tooltip" data-text="Whatever you spend money on that didn't fit above, plop it in here."
+                  class="Tooltip-module_Tooltip__g8PX- BudgetItem-module_Tooltip__l8t2j Tooltip-module_IsOpenTop__QSTBo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    class="rds-Icon rds-Icon--neutral BudgetItem-module_InformationIcon__lpLVD" focusable="false"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 2a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1.36 6.62V18h-2.72V9.62h2.72zM12 5.82c.92 0 1.55.59 1.55 1.42 0 .85-.63 1.41-1.55 1.41s-1.55-.56-1.55-1.41c0-.83.63-1.41 1.55-1.41z">
+                    </path>
+                  </svg></div>
+              </label>
+              <div class="rds-Input rds-Input--sm BudgetItem-module_Input__YirV6"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="rds-Input-icon" aria-hidden="true"
+                  focusable="false">
+                  <path fill-rule="evenodd"
+                    d="M13 1a1 1 0 1 0-2 0v1.048c-1.097.105-2.241.396-3.207.966C6.475 3.792 5.5 5.096 5.5 7c0 .91.211 1.7.614 2.376.4.67.956 1.172 1.568 1.561.971.619 2.18 1.006 3.318 1.325v6.713a17.04 17.04 0 0 1-4.672-.92 1 1 0 0 0-.656 1.89c1.719.597 3.513.945 5.328 1.033V23a1 1 0 1 0 2 0v-2.043c1.232-.1 2.427-.389 3.396-.991C17.7 19.157 18.5 17.838 18.5 16c0-.91-.211-1.7-.614-2.376-.4-.67-.956-1.172-1.568-1.561-.971-.619-2.18-1.006-3.318-1.325V4.063c1.065.12 2.108.405 3.088.848a1 1 0 1 0 .824-1.822A12.29 12.29 0 0 0 13 2.053V1Zm-2 3.06c-.812.097-1.584.318-2.19.676C8.01 5.208 7.5 5.904 7.5 7c0 .59.133 1.018.331 1.35.202.34.506.634.925.9.603.384 1.366.665 2.244.929v-6.12Zm2 8.761v6.128c.96-.095 1.76-.32 2.341-.682.702-.436 1.159-1.105 1.159-2.267 0-.59-.133-1.018-.331-1.35-.202-.34-.506-.633-.925-.9-.603-.384-1.366-.665-2.244-.929Z">
+                  </path>
+                </svg><input maxlength="10" data-testid="budget_item_input-Other" value="0.00"></div>
+            </div>
+          </div>
+        </div>
+        <div class="BudgetDifference-module_BudgetDifference__U9OxO">
+          <h2 class="rds-Heading rds-Heading--xsmall BudgetDifference-module_Heading__a-vpd">Difference</h2>
+          <div class="BudgetDifference-module_Value__ZUdAa" data-testid="budget_difference" style = "color: white;">$0.00</div>
+        </div>
+      </div>
+      <div class="BudgetCalculator-module_BudgetSummaryContainer__cKGwD">
+        <div class="BudgetSummary-module_BudgetSummary__aJGKg">
+          <div class="recharts-responsive-container" width="300" height="300"
+            style="width: 100%; height: 100%; min-width: 0px;">
+            <div class="recharts-wrapper" role="region"
+              style="position: relative; cursor: default; width: 300px; height: 300px;"><svg cx="50%" cy="50%"
+                class="recharts-surface" width="300" height="300" viewBox="0 0 300 300">
+                <title></title>
+                <desc></desc>
+                <defs>
+                  <clipPath id="recharts1-clip">
+                    <rect x="5" y="5" height="290" width="290"></rect>
+                  </clipPath>
+                </defs>
+                <g class="recharts-layer recharts-pie" tabindex="0">
+                  <g class="recharts-layer">
+                    <g class="recharts-layer recharts-pie-sector" tabindex="-1">
+                      <path tabindex="-1" name="Default" stroke="" fill="#D5D9DB" cx="150" cy="150"
+                        class="recharts-sector" d="M 295,150
+      A 145,145,0,
+      1,0,
+      294.9999999779152,150.00253072741526
+    L 249.99999998476915,150.0017453292519
+              A 100,100,0,
+              1,1,
+              250,150 Z" role="img"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg></div>
+          </div>
+          <div class="BudgetSummary-module_TextContainer__6XZvC">
+            <h3 class="rds-Heading rds-Heading--xsmall BudgetSummary-module_Label__RYkc6">Total Expenses</h3><span
+              class="BudgetSummary-module_Total__IxqMl" style = "color: white;">$0.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="BudgetCalculator-module_BudgetCTAContainer__gWneX">
+      </div>
+    </div>
+  </div>  </div>
   </div>
+
+  <script src="/.resources/magnolia-template-ramsey-calculators/assets/dist/js/budget-calculator/budgetCalculator.min~2024-01-22-19-36-04-000~cache.js" defer></script>
 </body>
 </html>
