@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['SQL_SERVER'] = 'IRIS\\SQLEXPRESS'
 app.config['SQL_DATABASE'] = 'userdatabase'
 
-
+ 
 
 def create_connection():
     return pyodbc.connect(
